@@ -22,12 +22,6 @@ function App() {
         day: 'Feb 8th at 1:30pm',
         reminder: true
     },
-    {
-        id: 4,
-        text: 'Food Shopping',
-        day: 'Feb 9th at 3:30pm',
-        reminder: true
-    },
   ])
 
   return (
