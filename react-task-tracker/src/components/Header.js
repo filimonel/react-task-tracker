@@ -1,10 +1,17 @@
 import PropTypes from 'prop-types'
+import Button from './Button'
 
 
 const Header = ({title}) => {
+    // This function is passed into our onClick event
+    const onClick = () => {
+        console.log("yayy!")
+    }
+
     return (
-        <header>
+        <header className='header'>
             <h1>{title}</h1>
+            <Button text='Add' color='green' onClick={onClick}/>
         </header>
     )
 }
@@ -17,12 +24,6 @@ Header.defaultProps = {
 // Restricts the prop data type. e.g. 'string', 'boolean', etc
 Header.propTypes = {
     title: PropTypes.string.isRequired
-}
-
-// CSS in js.
-var headingStyle = {
-    color: 'blue',
-    backgroundColor: 'gray'
 }
 
 export default Header
