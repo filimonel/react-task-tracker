@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import Button from './Button'
 
-
 const Header = ({title}) => {
     // This function is passed into our onClick event
     const onClick = () => {
