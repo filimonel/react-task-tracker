@@ -1,16 +1,10 @@
 {
   "tasks": [
     {
-      "text": "Clean the Car",
+      "text": "Clean the car",
       "day": "Friday",
       "reminder": false,
       "id": 1
-    },
-    {
-      "text": "Mop the floors",
-      "day": "Thursday",
-      "reminder": false,
-      "id": 2
     }
   ]
 }
