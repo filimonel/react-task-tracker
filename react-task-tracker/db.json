@@ -3,8 +3,20 @@
     {
       "text": "Clean the car",
       "day": "Friday",
-      "reminder": false,
+      "reminder": true,
       "id": 1
+    },
+    {
+      "text": "Clean the house",
+      "day": "Thursday",
+      "reminder": true,
+      "id": 2
+    },
+    {
+      "text": "qwe",
+      "day": "qwe",
+      "reminder": true,
+      "id": 3
     }
   ]
 }

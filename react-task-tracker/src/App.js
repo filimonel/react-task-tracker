@@ -7,9 +7,11 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 
 function App() {
+  // State
   const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState([]);
 
+  // Effect
   useEffect(() => {
     const getTasks = async () => {
       const tasksFromServer = await fetchTasks();
@@ -48,10 +50,6 @@ function App() {
     const data = await res.json();
 
     setTasks([...tasks, data]);
-
-    // const id = Math.floor(Math.random() * 10000) + 1;
-    // const newTask = { id, ...task };
-    // setTasks([...tasks, newTask]);
   };
 
   // Delete Task
