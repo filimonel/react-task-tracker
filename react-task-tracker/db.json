@@ -1,21 +1,21 @@
 {
   "tasks": [
     {
-      "text": "Clean the car",
-      "day": "Friday",
-      "reminder": true,
+      "text": "train",
+      "day": "monday",
+      "reminder": false,
       "id": 1
     },
     {
-      "text": "Clean the house",
-      "day": "Thursday",
-      "reminder": true,
+      "text": "eat brekky",
+      "day": "",
+      "reminder": false,
       "id": 2
     },
     {
-      "text": "qwe",
-      "day": "qwe",
-      "reminder": true,
+      "text": "walk to shops",
+      "day": "tuesday",
+      "reminder": false,
       "id": 3
     }
   ]

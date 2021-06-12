@@ -8,10 +8,11 @@ import About from "./components/About";
 
 function App() {
   // State
+  // Too grant access to data for all components, save it as as global variable or have it stored in a higher parent.
   const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState([]);
 
-  // Effect
+  // useEffect hook is a function that runs everytime the resource has changed and when the component first renders.
   useEffect(() => {
     const getTasks = async () => {
       const tasksFromServer = await fetchTasks();
@@ -90,12 +91,16 @@ function App() {
           showAdd={showAddTask}
         />
         <Route
+          // Set the path
           path="/"
+          // The path has to be exactly as described
           exact
-          render={(props) => (
+          // Syntax to set which component to render.
+          render={() => (
             <>
               {/* Shorthand ternary operator without an else */}
               {showAddTask && <AddTask onAdd={addTask} />}
+              
               {tasks.length > 0 ? (
                 <Tasks
                   tasks={tasks}
