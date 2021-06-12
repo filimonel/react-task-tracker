@@ -8,7 +8,7 @@ import About from "./components/About";
 
 function App() {
   // State
-  // Too grant access to data for all components, save it as as global variable or have it stored in a higher parent.
+  // Too grant access to data for more than one component, save it as as global variable or have it stored in a higher parent.
   const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState([]);
 
@@ -30,7 +30,7 @@ function App() {
     return data;
   };
 
-  // Fetch Task
+  // Fetch a specific Task
   const fetchTask = async (id) => {
     const res = await fetch(`http://localhost:5000/tasks/${id}`);
     const data = await res.json();
@@ -99,11 +99,13 @@ function App() {
           render={() => (
             <>
               {/* Shorthand ternary operator without an else */}
+              {/* {text: "clean car", day: "monday", reminder: true} data look like this when it's passed up from child */}
               {showAddTask && <AddTask onAdd={addTask} />}
-              
+
               {tasks.length > 0 ? (
                 <Tasks
                   tasks={tasks}
+                  // recieves task.id from Tasks.js and it used as an arguement for deleteTask function.
                   onDelete={deleteTask}
                   onToggle={toggleReminder}
                 />

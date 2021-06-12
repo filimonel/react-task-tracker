@@ -11,6 +11,7 @@ const Task = ({ task, onDelete, onToggle }) => {
       <h3>
         {task.text}
         <FaTimes
+        // Sends task.id up to Tasks.js
           onClick={() => onDelete(task.id)}
           style={{ color: "red", cursor: "pointer" }}
         />
